@@ -1,0 +1,51 @@
+﻿@model PMQLKSCK.Models.KhachHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KhachHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ho_Kh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ho_Kh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten_Kh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten_Kh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoCMT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoCMT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SĐT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SĐT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Ma_Kh }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

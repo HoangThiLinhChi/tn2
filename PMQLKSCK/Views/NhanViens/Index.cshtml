@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PMQLKSCK.Models.NhanVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label>Mã Nv</label>
+        </th>
+        <th>
+            <label>Họ</label>
+        </th>
+        <th>
+            <label>Tên Nv</label>
+        </th>
+        <th>
+            <label>Chức vụ</label>
+        </th>
+        <th>
+            <label>Địa Chỉ</label>
+        </th>
+        <th>
+            <label>Số CMT</label>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ma_Nv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ho_Nv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ten_Nv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ChucVu)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoCMT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DiaChi)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Ma_Nv }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Ma_Nv }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Ma_Nv })
+    </td>
+</tr>
+}
+
+</table>

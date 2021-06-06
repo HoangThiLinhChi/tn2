@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PMQLKSCK.Models.DichVu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label>Mã Dv</label>
+        </th>
+        <th>
+            <label>Tên Dv</label>
+        </th>
+        <th>
+            <label>Giá</label>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ma_Dv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ten_Dv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Gia)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Ma_Dv }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Ma_Dv }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Ma_Dv })
+    </td>
+</tr>
+}
+
+</table>
